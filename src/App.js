@@ -14,7 +14,7 @@ var emojiDictionary = {
   "🍐": "Pear",
   "🍑": "Peach",
   "🍒": "Cherries",
-  "🍓": "Strawberry"
+  "🍓": "Strawberry",
 };
 var EmojisWeKnow = Object.keys(emojiDictionary);
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
     var mean = emojiDictionary[input];
 
     if (mean === undefined) {
-      mean = "Oops! Invalid Input";
+      mean = "This emoji does not exist in our database.";
       setMeaning(mean);
       input = null;
     }
@@ -49,7 +49,7 @@ export default function App() {
         style={{
           color: "#010101",
           fontWeight: "700",
-          fontSize: "1.5rem"
+          fontSize: "1.5rem",
         }}
       >
         {meaning}
